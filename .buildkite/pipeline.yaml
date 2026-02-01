@@ -11,6 +11,10 @@ steps:
     depends_on: build
 
   - block: ":rocket: Ready to deploy?"
+    prompt: "Fill out the release details"
+    fields:
+      - text: "Release Name"
+        key: "release-name"
 
   - label: ":rocket: Deploy"
     command: "scripts/deploy.sh"
