@@ -15,10 +15,6 @@ steps:
     fields:
       - text: "Release Name"
         key: "release-name"
-    key: confirm
-    depends_on: test
 
   - label: ":rocket: Deploy"
     command: "scripts/deploy.sh"
-    key: deploy
-    depends_on: confirm
